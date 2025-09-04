@@ -1,4 +1,13 @@
 /* Custom premium refresh overrides */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1e40af;
+  --radius: 0.5rem;
+  --transition: 0.3s ease;
+}
+
 html {
   font-size: 16px;
 }
@@ -10,13 +19,25 @@ html {
 }
 
 body {
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
   line-height: 1.2;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-text {
@@ -38,14 +59,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .button {
   padding: 0.75rem 1.5rem;
+  min-height: 44px;
   font-size: 1rem;
-  transition: background-color .15s ease, color .15s ease;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius);
+  transition: background-color var(--transition), transform var(--transition);
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity .15s ease-out, transform .15s ease-out;
+  transition: opacity var(--transition), transform var(--transition);
+  will-change: opacity, transform;
 }
 
 .fade-in.visible {
@@ -54,9 +91,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
-  transition: transform .15s ease;
+  transition: transform var(--transition);
 }
 
 .service-card:hover {
   transform: translateY(-4px);
+}
+
+.service-card img,
+.hero-image,
+.features-image {
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.service-card:hover img,
+.hero-image:hover,
+.features-image:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 479px) {
+  .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .button,
+  .service-card,
+  .service-card img,
+  .hero-image,
+  .features-image {
+    transition: none;
+  }
 }
