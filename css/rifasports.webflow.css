@@ -9861,6 +9861,17 @@ blockquote {
 }
 
 @media screen and (max-width: 479px) {
+  /* Improve legibility on small screens */
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
   h1 {
     font-size: 3rem;
     line-height: 3.5rem;
