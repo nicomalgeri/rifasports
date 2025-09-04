@@ -4,7 +4,7 @@ This repository contains a static export of the Rifa Sports website prepared for
 
 ## Structure
 - `index.html` – main page
-- `assets/css/style.css` – global styles (cleaned from your Webflow export)
+- `assets/css/style.css` – custom overrides (core Webflow CSS is loaded from the CDN)
 - `assets/js/` – place `webflow.js` and other JS here (if present in your export)
 - `assets/images/` – all images
 - `assets/fonts/` – custom fonts used by the site
