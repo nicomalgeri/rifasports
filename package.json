@@ -1,0 +1,11 @@
+{
+  "name": "rifasports-new",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo \"Nothing to build\"",
+    "start": "npx serve -s . -l ${PORT:-3000}"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
