@@ -95,15 +95,20 @@ img {
 }
 
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: none;
   transition:
     opacity var(--transition),
     transform var(--transition);
   will-change: opacity, transform;
 }
 
-.fade-in.visible {
+html.js .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+html.js .fade-in.visible {
   opacity: 1;
   transform: none;
 }

@@ -1,4 +1,5 @@
 // Minimal fade-in on scroll
+document.documentElement.classList.add("js");
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".fade-in");
   const prefersReducedMotion = window.matchMedia(
