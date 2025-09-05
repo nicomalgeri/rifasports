@@ -1,11 +1,20 @@
 /* Custom premium refresh overrides */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #111827;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1e40af;
+  --color-bg: #263886;
+  --color-text: #8083ab;
+  --color-primary: #9f203e;
+  --color-primary-hover: #713365;
   --radius: 0.5rem;
+  --border-radius: var(--radius);
   --transition: 0.3s ease;
+
+  /* Override existing palette to use only approved colors */
+  --black: #263886;
+  --white: #8083ab;
+  --secondary: #713365;
+  --primary: #9f203e;
+  --light-gray: #8083ab;
+  --dark-gray: #713365;
 }
 
 html {
@@ -62,7 +71,7 @@ img {
   min-height: 44px;
   font-size: 1rem;
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-text);
   border-radius: var(--radius);
   transition: background-color var(--transition), transform var(--transition);
   touch-action: manipulation;
@@ -88,6 +97,42 @@ img {
 .fade-in.visible {
   opacity: 1;
   transform: none;
+}
+
+/* Ensure consistent rounded borders and palette usage */
+[class*="card"],
+.button,
+.w-nav,
+.w-container,
+.section,
+.hero-block,
+.navbar_outline {
+  border-radius: var(--radius);
+}
+
+body,
+.w-nav,
+.w-container,
+.section,
+.hero-block,
+.navbar_outline {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.service-card {
+  background-color: var(--color-primary);
+  background-image: none;
+  color: var(--color-text);
+}
+
+.service-card:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.service-card-title,
+.service-card-paragraph {
+  color: var(--color-text);
 }
 
 .service-card {
