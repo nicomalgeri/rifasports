@@ -1,6 +1,6 @@
 /* Custom premium refresh overrides */
 :root {
-  --color-bg: #263886;
+  --color-bg: #000000;
   --color-text: #8083ab;
   --color-primary: #9f203e;
   --color-primary-hover: #713365;
@@ -9,7 +9,7 @@
   --transition: 0.3s ease;
 
   /* Override existing palette to use only approved colors */
-  --black: #263886;
+  --black: #000000;
   --white: #8083ab;
   --secondary: #713365;
   --primary: #9f203e;
@@ -37,7 +37,12 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.2;
   font-weight: 600;
@@ -73,7 +78,9 @@ img {
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: var(--radius);
-  transition: background-color var(--transition), transform var(--transition);
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
   touch-action: manipulation;
 }
 
@@ -90,7 +97,9 @@ img {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity var(--transition), transform var(--transition);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
   will-change: opacity, transform;
 }
 
@@ -146,7 +155,9 @@ body,
 .service-card img,
 .hero-image,
 .features-image {
-  transition: transform var(--transition), filter var(--transition);
+  transition:
+    transform var(--transition),
+    filter var(--transition);
 }
 
 .service-card:hover img,
