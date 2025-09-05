@@ -193,3 +193,12 @@ body,
     transition: none;
   }
 }
+
+/* Hide full-screen nav overlay by default */
+.nav-menu-3 {
+  display: none;
+}
+
+.nav-menu-3.w--open {
+  display: block;
+}
